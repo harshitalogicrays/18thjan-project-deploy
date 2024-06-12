@@ -80,7 +80,7 @@ let saveorder=async()=>{
 }
 
 let sendmail=(orderConfig)=>{
-   fetch("http://localhost:2000/mail", {
+   fetch("https://18thjan-server.vercel.app/mail", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ email:userEmail,status:orderConfig.orderStatus,amount:totalAmount,name:userName }),

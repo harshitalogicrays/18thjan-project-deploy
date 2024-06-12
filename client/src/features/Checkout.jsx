@@ -11,7 +11,7 @@ export default function Chekout() {
   const [clientSecret, setClientSecret] = useState("");
   const amount=useSelector(selectAmount)
   useEffect(() => {
-    fetch("http://localhost:2000/create-payment-intent", {
+    fetch("https://18thjan-server.vercel.app/create-payment-intent", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ amount }),
